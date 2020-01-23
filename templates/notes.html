@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <center><h3>My Notes</h3>
+    <hr>
+    {% if note %}
+        {% for note in notes %}
+    
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a  href="/single_note/{{note.noteId}}">{{note.title}}</a> <small class="time"><i class="far fa-clock"></i> Added on {{note.time}}</small><br><br>
+                    <a class="btn btn-success" href="/edit_note/{{note.noteId}}">Edit</a>
+                    <a class="btn btn-danger" href="/delete_note/{{note.noteId}}">Delete</a>
+            
+                </li>
+            </ul>
+        {% endfor %}
+    {% else %}
+        <p>NO NOTES!!</p>
+        <a class="btn btn-success" href="/add_notes">Add New Notes</a>
+    {% endif %}
+    
+</center>
+    
+</div>    
+
+
+
+
+{% endblock %}

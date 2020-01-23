@@ -1,0 +1,112 @@
+body{
+  overflow: hidden;
+  
+  background-image: url(/static/wood.jpg);
+
+  background-repeat: no-repeat ;
+  background-size: auto;
+  background-blend-mode: darken;
+  color: white;
+  
+  
+}
+.time{
+  color: black;
+}
+h3,p,label,h1{
+  color: white;
+
+}
+p{
+  font-size: 20px;
+}
+hr{
+  color: white;
+}
+
+small{
+  color: white;
+}
+.grid-container{
+  display:inline-grid;
+  align-content: center;
+}
+.grid-form{
+  grid-column: 2;
+  padding-left: 25px;
+}
+.grid-intro{
+  grid-column: 1;
+  margin-top: 35px;
+}
+.container{
+  padding-top: auto;
+}
+.sign-up{
+  background-color:rgb(0, 105, 217);
+  color: white;
+  border-radius: 4px;
+  padding: 8.5px;
+}
+a.sign-up:hover{
+  color: rgb(0, 105, 217);
+  background-color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+img{
+  width: 50px;
+  height: 30px;
+}
+h1{
+  font-family: 'Architects Daughter', cursive;
+
+}
+
+.sidenav {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; 
+  }
+  
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+.nav-icon{
+    float: left;
+    color:white;
+    padding: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    background-blend-mode: inherit;
+}

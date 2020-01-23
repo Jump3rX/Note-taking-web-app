@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h3><u>{{note.title|safe}}</u></h3>
+    <small>Written on <i>{{note.time|safe}}</i></small><br>
+    <p>{{note.body|safe}}</p>
+
+</div>
+{% endblock %}
