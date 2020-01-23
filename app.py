@@ -172,44 +172,6 @@ def profile_delete():
 def signout():
     session.clear()
     return redirect(url_for('index'))
-#######################################################################################################################
-@app.route('/admin')
-@login_required
-def admin():
-    cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM users")
-    users = cur.fetchall()
-    cur.close()
-    return render_template('admin.html',users=users)
-
-@app.route('/delete_user/<string:id>')
-@login_required
-def delete_user(id):
-    cur = mysql.connection.cursor()
-    cur.execute("DELETE FROM users WHERE id = %s",(id))
-    mysql.connection.commit()
-    cur.close()
-    return redirect(url_for('admin'))
-
-@app.route('/delete_users')
-@login_required
-def delete_users():
-    cur = mysql.connection.cursor()
-    cur.execute("DELETE FROM users")
-    mysql.connection.commit()
-    cur.close()
-    flash('All Users deleted!!')
-    return redirect(url_for('admin'))
-
-@app.route('/delete_notes')
-@login_required
-def delete_notes():
-    cur = mysql.connection.cursor()
-    cur.execute("DELETE FROM notes")
-    mysql.connection.commit()
-    cur.close()
-    flash('All notes deleted!!')
-    return redirect(url_for('admin'))
 
 if __name__ == '__main__':
     app.run(debug=True)
